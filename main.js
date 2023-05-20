@@ -31,7 +31,7 @@ app.use(methodOverride());
     // Status
     app.get('/api/status', multipartMiddleware, (req, res) => res.json({ "status": 200 }));
 
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({ headless: false, args: ['--no-sandbox'] });
     const page = await browser.newPage();
     if (haveCookie) for (const cookie of cookies) {
         await page.setCookie(cookie);
