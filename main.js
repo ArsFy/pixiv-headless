@@ -18,7 +18,7 @@ try {
     haveCookie = fs.readFileSync('./cookie.json', 'utf8');
     cookies = JSON.parse(haveCookie);
     haveCookie = true;
-} catch (e) { console.error(e) }
+} catch (e) { }
 
 // Setting
 app.disable('x-powered-by');
@@ -67,9 +67,9 @@ app.use(methodOverride());
                                             break
                                         }
                                     }
-                                } catch (e) { console.error(e) }
+                                } catch (e) { }
                             }
-                        } catch (e) { console.error(e) }
+                        } catch (e) { }
                     });
 
                     setTimeout(async () => {
