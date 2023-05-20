@@ -6,7 +6,7 @@ const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 
-const token = fs.readFileSync('./token', 'utf8');
+const token = fs.readFileSync('./token', 'utf8').replace(/(^\s*)|(\s*$)/g, "");
 
 const readline = require('readline').createInterface({
     input: process.stdin,
