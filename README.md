@@ -24,7 +24,7 @@ POST /api/get_image
 
 | Key | Description |
 | --- | ----------- |
-| id  | Pixiv ID    |
+| i  | Pixiv ID    |
 | token | `./token` random text |
 
 #### Return
